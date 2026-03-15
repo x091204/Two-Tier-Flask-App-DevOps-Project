@@ -14,7 +14,7 @@ services:
       - two-tier-net
     restart: always
     healthcheck:
-      test: ["CMD", "mysqladmin","ping","-h","localhost","-uroot","-proot"]
+      test: ["CMD", "mysqladmin","ping","-h","localhost","-uroot","-pDevOps@123"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -27,10 +27,10 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MYSQL_HOSTS="mysql"
-      - MYSQL_USER="root"
-      - MYSQL_PASSWORD="DevOps@123"
-      - MYSQL_DB="student_db"
+      - MYSQL_HOSTS=mysql
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=DevOps@123
+      - MYSQL_DB=student_db
     networks:
       - two-tier-net
     depends_on:
