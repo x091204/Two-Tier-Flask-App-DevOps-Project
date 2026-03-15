@@ -1,6 +1,6 @@
-# Two-Tier-Flask-App-DevOps-Project (Flask + MySQL)
+# Two-Tier Flask App — DevOps Project
 
-A student records management web app built with **Flask + MySQL**, containerised with Docker and deployed on **AWS EC2** with a fully automated Jenkins CI/CD pipeline.
+web app built with **Flask + MySQL**, containerised with Docker and deployed on **AWS EC2** with a Jenkins CI/CD pipeline.
 
 ---
 
@@ -11,7 +11,6 @@ A student records management web app built with **Flask + MySQL**, containerised
 ![MySQL](https://img.shields.io/badge/MySQL-orange)
 ![Docker](https://img.shields.io/badge/Docker-blue)
 ![Jenkins](https://img.shields.io/badge/Jenkins-CI%2FCD-red)
-![Trivy](https://img.shields.io/badge/Trivy-Security-blueviolet)
 ![AWS](https://img.shields.io/badge/AWS-EC2-yellow)
 
 ---
@@ -22,16 +21,14 @@ A student records management web app built with **Flask + MySQL**, containerised
 - MySQL database with persistent Docker volume
 - Multi-container setup with Docker Compose and custom networking
 - MySQL health check ensures Flask only starts when the DB is ready
-- Jenkins pipeline automates the full delivery process
-- Trivy scans the Docker image for CRITICAL vulnerabilities before deploy
-- Pytest unit tests with mocked DB run as a pipeline quality gate
+- Jenkins pipeline automates build and deployment on every push
 
 ---
 
 ## ⚙️ CI/CD Pipeline
 
 ```
-Clone → Install Deps → Pytest → Build Docker Image → Trivy Scan → Deploy
+Clone Repo → Build Docker Image → Deploy with Docker Compose
 ```
 
 ---
@@ -62,9 +59,10 @@ Developer → GitHub → Jenkins (EC2)
 ├── templates/
 │   ├── index.html
 │   └── add_student.html
-├── tests/
-│   └── test_app.py
+├── static/
+│   └── style.css
 ├── app.py
+├── config.py
 ├── Dockerfile
 ├── docker-compose.yml
 └── Jenkinsfile
