@@ -27,7 +27,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MYSQL_HOSTS=mysql
+      - MYSQL_HOST=mysql
       - MYSQL_USER=root
       - MYSQL_PASSWORD=DevOps@123
       - MYSQL_DB=student_db
