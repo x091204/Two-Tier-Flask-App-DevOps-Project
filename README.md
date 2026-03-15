@@ -1,9 +1,8 @@
 # Two-Tier-Flask-App-DevOps-Project (Flask + MySQL)
 
 A simple web application built with **Python Flask and MySQL** that allows users to manage student records.
-This project was created as a **practice application for DevOps workflows**, including containerization, CI/CD pipelines, and security scanning.
+This project was created as a **practice application for DevOps workflows**, including containerization, CI/CD pipelines.
 
----
 
 ## Features
 
@@ -13,7 +12,6 @@ This project was created as a **practice application for DevOps workflows**, inc
 * Simple web interface using HTML and CSS
 * MySQL database integration
 
----
 
 ## Tech Stack
 
@@ -22,7 +20,6 @@ This project was created as a **practice application for DevOps workflows**, inc
 * **Frontend:** HTML, CSS
 * **Version Control:** Git & GitHub
 
----
 
 ## Project Structure
 
@@ -44,7 +41,6 @@ student-record-system
     └── init.sql
 ```
 
----
 
 ## Setup Instructions
 
@@ -81,7 +77,6 @@ Run the SQL initialization file:
 mysql -u root -p student_db < db/init.sql
 ```
 
----
 
 ### 4. Configure Database Connection
 
@@ -94,7 +89,6 @@ MYSQL_PASSWORD = "yourpassword"
 MYSQL_DB = "student_db"
 ```
 
----
 
 ### 5. Run the Application
 
@@ -108,7 +102,6 @@ Open your browser and visit:
 http://127.0.0.1:5000
 ```
 
----
 
 ## Future DevOps Enhancements
 
@@ -116,13 +109,11 @@ This project will be extended with:
 
 * Docker containerization
 * Jenkins CI/CD pipeline
----
 
 ## Purpose of the Project
 
 This application is used as a **practice project for learning DevOps tools and workflows**, including automation, containerization, and deployment strategies.
 
----
 
 ## Author
 akifmuhammed
