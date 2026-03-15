@@ -1,4 +1,4 @@
-# Student Record System (Flask + MySQL)
+# Two-Tier-Flask-App-DevOps-Project (Flask + MySQL)
 
 A simple web application built with **Python Flask and MySQL** that allows users to manage student records.
 This project was created as a **practice application for DevOps workflows**, including containerization, CI/CD pipelines, and security scanning.
