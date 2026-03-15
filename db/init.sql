@@ -1,10 +1,6 @@
-CREATE DATABASE IF NOT EXISTS student_db;
+import os
 
-USE student_db;
-
-CREATE TABLE IF NOT EXISTS students (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100),
-    roll_no VARCHAR(50),
-    grade VARCHAR(10)
-);
+MYSQL_HOST = os.getenv("MYSQL_HOST", "mysql")
+MYSQL_USER = os.getenv("MYSQL_USER", "root")
+MYSQL_PASSWORD = os.getenv("MYSQL_PASSWORD", "DevOps@123")
+MYSQL_DB = os.getenv("MYSQL_DB", "student_db")
