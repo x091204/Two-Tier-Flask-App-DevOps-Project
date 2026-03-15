@@ -28,14 +28,15 @@ services:
     ports:
       - "5000:5000"
     environment:
-      - MYSQL_HOST=mysql
+      - MYSQL_HOST=db
       - MYSQL_USER=root
       - MYSQL_PASSWORD=DevOps@123
       - MYSQL_DB=student_db
     networks:
       - two-tier-net
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     restart: always
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:5000/health || exit 1"]
